@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinterest Downloader</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="card">
+    <div class="brand">Pinterest</div>
+    <h1>Download images & videos</h1>
+    <p class="subtitle">Paste a Pinterest pin URL to save it as JPG, PNG or MP4.</p>
+
+    <form id="downloadForm">
+      <label for="url">Pinterest URL</label>
+      <div class="input-row">
+        <input id="url" name="url" type="url" placeholder="https://www.pinterest.com/pin/..." required>
+        <button id="fetchButton" type="submit">Fetch</button>
+      </div>
+    </form>
+
+    <div id="status" class="status" aria-live="polite"></div>
+    <section id="result" class="result hidden">
+      <div class="preview-wrap">
+        <img id="preview" alt="Pinterest media preview">
+      </div>
+      <div class="actions">
+        <span id="mediaType" class="badge"></span>
+        <a id="downloadButton" class="download" download>Download</a>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
